@@ -1,0 +1,836 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700;
+  /* Golden yellow for the logo */
+  font-family: 'Pacifico', cursive;
+  /* Playful font for the logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+  /* Golden yellow on hover */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  /*background-image: url("/images/banner.jpg");*/
+  background: linear-gradient(135deg, #FFA07A, #FFD700);
+  /*Gradient: Light orange to golden yellow*/
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Chewy', cursive;
+  /* Playful font for the heading */
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Banner Styles */
+
+.banner {
+  background: linear-gradient(135deg, #FFA07A,#45a049);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.banner-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: 'Chewy', cursive;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.banner-content .btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.banner-content .btn:hover {
+  background-color: #c8f4ca;
+}
+
+/* Hover Effect */
+.banner:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Banner Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  background-color: #FF6347;
+  /* Tomato red */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #FF4500;
+  /* Darker orange-red */
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+  /* Dark gray */
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #FF6347;
+  /* Tomato red on hover */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  text-align: left;
+  color: #555;
+  /* Dark gray */
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  /* Light gray for input background */
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4CAF50;
+  /* Fresh green border on focus */
+  outline: none;
+}
+
+form button {
+  padding: 10px;
+  background-color: #FF6347;
+  /* Tomato red */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+} 
+
+form button:hover {
+  background-color: #FF4500;
+  /* Darker orange-red on hover */
+}
+
+/* Featured Products Section */
+.featured-products,
+.products {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.products h2, .prod_aff{
+  font-size: 32px;
+  color: #4CAF50;
+  /* Fresh green */
+  margin-bottom: 20px;
+  font-family: 'Chewy', cursive;
+  /* Playful font for headings */
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  color: #4CAF50;
+  /* Fresh green */
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #555;
+  /* Dark gray */
+  margin-bottom: 10px;
+}
+
+.product-card .btn {
+  background-color: #FF6347;
+  /* Tomato red */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background-color: #FF4500;
+  /* Darker orange-red */
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #4CAF50; /* Vert principal comme votre header */
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  color: #FFD700; /* Jaune doré comme votre logo */
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Chewy', cursive; /* Police cohérente avec vos titres */
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a:hover {
+  color: #FFD700; /* Jaune au survol */
+}
+
+.footer-links a::before {
+  content: "→";
+  color: #FFD700;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: #fff;
+  background-color: rgba(255, 215, 0, 0.2); /* Jaune transparent */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #FFD700; /* Jaune solide au survol */
+  transform: translateY(-3px);
+}
+.newsletter{
+  margin-right: 40px;
+}
+.newsletter-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter-form button {
+  background-color: #FFD700;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-links {
+    align-items: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Page Auteurs */
+.auteurs {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.auteurs h2 {
+  font-size: 32px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  font-family: 'Chewy', cursive;
+}
+
+.auteurs-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.auteur-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auteur-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.auteur-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.auteur-card h3 {
+  font-size: 20px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.auteur-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.auteur-card .role {
+  font-style: italic;
+  color: #FF6347;
+}
+
+.produit-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.produit-content img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.produit-details h3 {
+  font-size: 24px;
+  color: #4CAF50;
+  /* Fresh green */
+  margin-bottom: 10px;
+}
+
+.produit-details .price {
+  font-size: 20px;
+  color: #FF6347;
+  /* Tomato red */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detail-container{
+  display: block;
+}
+.produit-details .description {
+  font-size: 16px;
+  color: #555;
+  /* Dark gray */
+  margin-bottom: 20px;
+}
+
+.quantity {
+  margin-bottom: 20px;
+}
+
+.quantity label {
+  font-size: 16px;
+  color: #555;
+  /* Dark gray */
+}
+
+.quantity input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60px;
+}
+
+.produit-details .btn {
+  background-color: #FF6347;
+  /* Tomato red */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.produit-details .btn:hover {
+  background-color: #FF4500;
+  /* Darker orange-red */
+}
+
+/* PDF Button Styles */
+.pdf-btn {
+  background-color: #FF6347;
+  /* Tomato red */
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-btn:hover {
+  background-color: #FF4500;
+  /* Darker orange-red */
+}
+
+/* Search Bar Styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 14px;
+}
+
+#search-btn {
+  background-color: #FF6347;
+  /* Tomato red */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: #FF4500;
+  /* Darker orange-red */
+}
+
+/* Connexion Page Styles */
+.connexion {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.connexion h2 {
+  font-size: 32px;
+  color: #4CAF50;
+  /* Fresh green */
+  margin-bottom: 20px;
+  font-family: 'Chewy', cursive;
+  /* Playful font for headings */
+}
+
+.connexion-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  background-color: #FF6347;
+  /* Tomato red */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-buttons button.active {
+  background-color: #4CAF50;
+  /* Fresh green */
+}
+
+.toggle-buttons button:hover {
+  background-color: #FF4500;
+  /* Darker orange-red */
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #555;
+  /* Dark gray */
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  background-color: #4CAF50;
+  /* Fresh green */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #45a049;
+  /* Darker green */
+}
+
+/* Styles pour la page de confirmation de commande */
+.confirmation {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.confirmation h2 {
+  font-size: 32px;
+  color: #4CAF50;
+  /* Vert frais */
+  margin-bottom: 20px;
+  font-family: 'Chewy', cursive;
+  /* Police ludique */
+}
+
+.confirmation-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.order-summary,
+.checkout-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Fond semi-transparent */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.order-summary h3,
+.checkout-form h3 {
+  font-size: 24px;
+  color: #4CAF50;
+  /* Vert frais */
+  margin-bottom: 20px;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-item img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+.item-details h3 {
+  font-size: 18px;
+  color: #333;
+  /* Gris foncé */
+  margin-bottom: 5px;
+}
+
+.item-details p {
+  font-size: 14px;
+  color: #555;
+  /* Gris moyen */
+}
+
+.order-total {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  /* Gris foncé */
+}
+
+.order-total .total {
+  font-weight: bold;
+  color: #4CAF50;
+  /* Vert frais */
+}
+
+.checkout-form label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  /* Gris moyen */
+  margin-bottom: 5px;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout-form button {
+  background-color: #4CAF50;
+  /* Vert frais */
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-form button:hover {
+  background-color: #45a049;
+  /* Vert plus foncé */
+}
